@@ -13,49 +13,13 @@ uod_generic_subterranean_region = ["0", "0", "Dragon-type", "Weird", "Outsider",
 # _use Uod sub-tables for '-type' specific results_
 uod_jungle_civilized_region = ["0", "0", "Dragon-type", "Weird", "Outsider", "Monster-type", "Local Faction", "Cult-type", "Local Faction", "Local Fauna","Humanoid", "Weird", "Wizard-type"]
 
-uod_jungle_bug_region = ["0", "0", "Dragon-type", "Weird", "Outsider", "Monster-type", "Local Faction", "Local Fauna",
-"Local Faction", "Cult-type", "Metal Snail", "Weird", "Wizard-type" ]
+uod_jungle_bug_region = ["0", "0", "Dragon-type", "Weird", "Outsider", "Monster-type", "Local Faction", "Local Fauna", "Local Faction", "Cult-type", "Metal Snail", "Weird", "Wizard-type" ]
 
-uod_jungle_lizardfolk_region = ["0", "0",
-"Dragon-type",
-"Weird",
-"Outsider",
-"giant frog/snake",
-"Local Faction",
-"Insect Swarm",
-"Local Faction",
-"Cult-type",
-"Boar"
-"Weird",
-"Wizard-type"
-]
+uod_jungle_lizardfolk_region = ["0", "0", "Dragon-type", "Weird", "Outsider", "giant frog/snake", "Local Faction", "Insect Swarm", "Local Faction", "Cult-type", "Boar", "Weird", "Wizard-type" ]
 
-region_4_array = ["0", "0",
-"bug zombie",
-"insect swarm"
-"stirges",
-"giant snapping turtles",
-"insect, common",
-"animal, small",
-"giant leeches",
-"malicious fish",
-"throat leeches",
-"snake, poisonous/constrictor",
-"shambling mound"
-]
+region_4_array = ["0", "0", "bug zombie", "insect swarm" "stirges", "giant snapping turtles", "insect, common", "animal, small", "giant leeches", "malicious fish", "throat leeches", "snake, poisonous/constrictor", "shambling mound" ]
 
-region_3_array = ["0", "0",
-"dinosaur, common",
-"humanoid, common",
-"animal",
-"giant turtle",
-"giant leeches",
-"stirges",
-"insect swarm",
-"crocodiles",
-"giant animal",
-"pterodactyl",
-"snake"
+region_3_array = ["0", "0", "dinosaur, common",  "humanoid, common", "animal", "giant turtle", "giant leeches", "stirges", "insect swarm", "crocodiles", "giant animal", "pterodactyl", "snake"
 ]
 
 region_2_array = ["0", "0",

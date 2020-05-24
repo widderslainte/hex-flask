@@ -1,8 +1,13 @@
 from flask import Flask, render_template
 import random
+
 from encounter import *
+from environment import *
+from random_encounters import *
+from factions import *
 
 app = Flask(__name__)
+source = '/app.py'
 
 # Load the configuration from the instance folder
 # app.config.from_pyfile('config.py')
@@ -38,7 +43,7 @@ def encounterdie():
 
 @app.route('/')
 def hello_world():
-    return render_template('index.html', message="Dungeon Science")
+    return render_template('index.html', message="Dungeon Science", source=source)
 
 @app.route('/2d6')
 def sample_2d6():
@@ -65,16 +70,39 @@ def hexday():
 
 @app.route('/encounter/')
 def encounter_generation():
-    section = 'Encounter Layout'
+    section = 'Encounter Scene Layout'
     visibility = check_visibility()
-    # print(check_elevation())
     elevation = check_elevation()
-    # print(check_cover())
     cover = check_cover()
-    # print(check_distance())
     distance = check_distance()
-    # print(check_motivation())
     motivation = check_motivation()
-    # print(check_reaction())
     reaction = check_reaction()
     return render_template('encounter.html', title=section, section=section, elevation=elevation, visibility=visibility, cover=cover, distance=distance, motivation=motivation, reaction=reaction)
+
+@app.route('/environment/')
+def enviroment_generation():
+    section = 'Environment Generation'
+    temp = check_temperature()
+    weather = check_weather()
+    odors = check_odors()
+    return render_template('environment.html', title=section, section=section, item1=temp, item2=weather, item3=odors)
+
+@app.route('/check')
+def check():
+    section = "Check for Random Encounters"
+    explored = check_explored()
+    unexplored = check_unexplored()
+    obstacle = check_obstacle()
+    encounter_time = check_encounter_time()
+    wander_activity = check_wander_activity()
+    return render_template('generic5.html', title=section, section=section, item1=explored, item2=unexplored, item3=obstacle, item4=encounter_time, item5=wander_activity)
+
+@app.route('/factions')
+def faction_connection():
+    section = "Faction Connection"
+    faction = check_faction()
+    item2 = ""
+    item3 = ""
+    item4 = ""
+    item5 = ""
+    return render_template('generic5.html', title=section, section=section, item1=faction, item2=item2, item3=item3, item4=item4, item5=item5)

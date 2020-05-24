@@ -91,6 +91,3 @@ def check_odors():
     else:
         return 'Odors:  Very foul, (roll was: ' + str(rolls) + ')'
 
-print(check_temperature())
-print(check_weather())
-print(check_odors())
