@@ -2,6 +2,8 @@ from flask import render_template
 from app import app
 import random
 
+source = 'routes.py'
+
 def roll2d6():
    dice1 = random.randint(1,6)
    dice2 = random.randint(1,6)
@@ -36,7 +38,7 @@ def encounterdie():
  
 @app.route('/')
 def hello_world():
-   return render_template('index.html', message="Dungeon Science")
+   return render_template('index.html', message="Dungeon Science", source=source)
  
 @app.route('/jungle/')
 def jungle():
@@ -55,7 +57,3 @@ def hexday():
 def basic_roll():
     result = roll2d6()
     return render_template('roll.html', message=result)
-
-# @app.route('/spencer')
-# def basic_roll():
-#     return 'Hi Spencer'
