@@ -5,6 +5,7 @@ from encounter import *
 from environment import *
 from random_encounters import *
 from factions import *
+from monsters_jungle import *
 
 app = Flask(__name__)
 source = '/app.py'
@@ -106,3 +107,21 @@ def faction_connection():
     item4 = ""
     item5 = ""
     return render_template('generic5.html', title=section, section=section, item1=faction, item2=item2, item3=item3, item4=item4, item5=item5)
+
+@app.route('/monster')
+def check_monster():
+    section = "Random Monster Result"
+    explored = check_uod_jungle_civilized_region()
+    unexplored = check_uod_jungle_bug_region()
+    obstacle = check_array_1_region()
+    check_lc_region = check_uod_jungle_lizardfolk_region()
+    wander_activity = check_wander_activity()
+    # print(check_uod_jungle_bug_region())
+    # print(check_array_1_region())
+    output2 = (check_array_2_region())
+    output3 = (check_array_3_region())
+    output4 = (check_array_4_region())
+    # print(check_uod_jungle_civilized_region())
+    # print(check_uod_jungle_lizardfolk_region())
+    return render_template('generic8.html', title=section, section=section, item1=explored, item2=unexplored, item3=check_lc_region, item4=obstacle, item5=output2, item6=output3, item7=output4, item8=wander_activity)
+

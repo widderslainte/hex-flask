@@ -43,13 +43,13 @@ def check_array_3_region():
 def check_array_4_region():
     return 'Array 4 Region Encounter: ' + region_4_array[standard_roll()]
 
-print(check_uod_jungle_bug_region())
-print(check_array_1_region())
-print(check_array_2_region())
-print(check_array_3_region())
-print(check_array_4_region())
-print(check_uod_jungle_civilized_region())
-print(check_uod_jungle_lizardfolk_region())
+# print(check_uod_jungle_bug_region())
+# print(check_array_1_region())
+# print(check_array_2_region())
+# print(check_array_3_region())
+# print(check_array_4_region())
+# print(check_uod_jungle_civilized_region())
+# print(check_uod_jungle_lizardfolk_region())
 
 # A. Encounter Type (ex. Intelligent, Beast, Lizardman, Plant)
 # B. Specific Thing (roll on the appropriate subtable like "Beast")
