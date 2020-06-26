@@ -60,6 +60,15 @@ def check_weather():
     else:
         return 'Weather:  Remains the same, (roll was: ' + str(rolls) + ')'
 
+def weathertype():
+    rolls = roll2d6()
+    if rolls < 7:
+        return 'The weather gets worse, roll was: ' + str(rolls)
+    elif rolls == 7:
+        return 'The weather stays the same, roll was: ' + str(rolls)        
+    else:
+        return 'The weather gets milder, roll was: ' + str(rolls)
+
 # # Determine local terrain
 # def check_local_terrain():
 #     rolls = roll2d6()

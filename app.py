@@ -1,11 +1,12 @@
 from flask import Flask, render_template
 import random
 
-from encounter import *
+from describe_encounter import *
 from environment import *
 from random_encounters import *
 from factions import *
 from monsters_jungle import *
+from treasure import *
 
 app = Flask(__name__)
 source = '/app.py'
@@ -18,13 +19,6 @@ def roll2d6():
     dice2 = random.randint(1,6)
     total = dice1 + dice2
     return total
-
-def weathertype():
-    rolls = roll2d6()
-    if rolls < 7:
-        return 'The forecast is bad, roll was: ' + str(rolls)
-    else:
-        return 'The forecast is good, roll was: ' + str(rolls)
 
 def terraintype():
     rolls = roll2d6()
@@ -50,11 +44,6 @@ def hello_world():
 def sample_2d6():
     sample = roll2d6()
     return 'Sample roll was: ' + str(sample)
-
-@app.route('/weather/')
-def sample_weather():
-    weather = weathertype()
-    return weather
 
 @app.route('/jungle/')
 def jungle():
@@ -125,3 +114,12 @@ def check_monster():
     # print(check_uod_jungle_lizardfolk_region())
     return render_template('generic8.html', title=section, section=section, item1=explored, item2=unexplored, item3=check_lc_region, item4=obstacle, item5=output2, item6=output3, item7=output4, item8=wander_activity)
 
+@app.route('/treasure')
+def check_treasure():
+    section = "Treasure"
+    gem_ornamental = check_ornamental() 
+    gem_semiprecious = check_semiprecious() 
+    gem_fancy = check_fancy()  
+    output4 = "foo"
+    output5 = "bar"
+    return render_template('generic5.html', title=section, section=section, item1=gem_ornamental, item2=gem_semiprecious, item3=gem_fancy, item4=output4, item5=output5)

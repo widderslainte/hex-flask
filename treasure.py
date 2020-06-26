@@ -26,6 +26,18 @@ def check_fancy():
     array_fancy = ["0", "1. Amber: watery gold to rich gold, 100gp", "2. Alexandrite: dark green, 100gp", "3. Amethyst: deep purple, 100gp", "4. Aquamarine: pale blue green, 500gp", "5. Chrysoberyl: yellow green to green, 100gp", "7. Garnet: red, brown-green, or violet, 100-500gp", "8. Jade: light green, deep green, green and white, white, 100gp", "10. Pearl*: lustrous white, yellowish, pinkish, etc. to pure black, 100-500gp", "11. Peridot: rich olive green, 500gp", "12. Spinel: red, red-brown, deep green, or very deep blue, 100-500gp", "13. Topaz: golden yellow, 500gp", "14. Tourmaline: green pale, blue pale, brown pale, or reddish pale, 100gp"] 
     return 'Fancy Stone: ' + array_fancy[roll1d12()]
 
-print(check_ornamental()) 
-print(check_semiprecious()) 
-print(check_fancy()) 
+# GEM STONES, 1,000 or more g.p. Base Value:
+# 1. Black Opal: dark green with black mottling and golden flecks
+# 2. Black Sapphire: lustrous black with glowing highlights (5,000)
+# 3. Diamond: clear blue-white with lesser stones clear white or pale tints (5,000)
+# 4. Emerald: deep bright green
+# 5. Fire Opal: fiery red
+# 6. Jacinth: fiery orange (Corundum) (5,000)
+# 7. Opal: pale blue with green and golden mottling
+# 8. Oriental Amethyst: rich purple (Corundum)
+# 9. Oriental Emerald: clear bright green (Corundum) (5,000)
+# 10. Oriental Topaz: fiery yellow (Corundum)
+# 11. Ruby: clear red to deep crimson (Corundum) (5,000)
+# 12. Sapphire: clear to medium blue (Corundum)
+# 13. Star Ruby: translucent ruby with white “star” center
+# 14. Star Sapphire: translucent sapphire with white “star” center
