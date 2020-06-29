@@ -21,3 +21,7 @@ def roll1d12():
 def roll1d20():
     dice1 = random.randint(1,20)
     return dice1
+
+def roll1d100():
+    dice1 = random.randint(1,100)
+    return dice1
