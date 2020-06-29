@@ -13,8 +13,8 @@ PassageType = [ "Track", "Path", "Trail", "Dirt Road", "Gravel Road", "Paved Roa
 #Lair Table - d6 Type
 LairType = [ "Burrow, Cave, Ledge, Rock Pile, or Mound", "Trees (hollow or dwelling built in boughs/treetops)", "Construct", "Ruins", "Water, Shipwreck, Underwater Cave, or Sunken Ruin", "Floating Tower, Cloud Castle" ]
 
-# Obstruction Jungle d6
-ObstructionJungle = ["Crater", "Chasm", "Cliff", "Ravine", "Swamp", "Vegetation", "Quicksand/Mud"]
+# Obstruction Jungle d8
+ObstructionJungle = ["Crater", "Chasm", "Cliff", "Ravine", "Swamp", "Vegetation", "Quicksand/Dark Mud", "Insect Swarm", "Cloud of Fungus Spores"]
 
 # Conctruct d10
 ConstructionType = ["1 Monolith", "2 Barrow", "3 Pyramid", "4 Tower", "5 Spire", "6 Building", "7 Heap", "8 Signpost", "9 Isolated Farm", "10 Ruins"]
@@ -34,3 +34,5 @@ PassageType = ["1 Track", "2 Path", "3 Trail", "4 Dirt Road", "5 Gravel Road", "
 
 # 1: Indicates that a bridge is out for the listed feature. If in a swamp, any of these results indicate the road is flooded. In the desert, streams and ravines are treated as dry ravines.
 # 2: Blocked by fallen tree in clear, woods, and swamp; blocked by rockslide in mountain; or road hidden by sand in desert.
+
+print(ObstacleType[roll1d10()])
