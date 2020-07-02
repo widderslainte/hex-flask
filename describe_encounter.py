@@ -91,10 +91,3 @@ def check_visibility():
     else:
         return 'Visibility:  Clear  (roll was: ' + str(rolls) + ')'
 
-
-# print(check_visibility())
-# print(check_elevation())
-# print(check_cover())
-# print(check_distance())
-# print(check_motivation())
-# print(check_reaction())
