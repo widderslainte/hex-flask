@@ -7,6 +7,7 @@ from random_encounters import *
 from factions import *
 from monsters_jungle import *
 from treasure import *
+from healing import *
 
 app = Flask(__name__)
 source = '/app.py'
@@ -53,7 +54,7 @@ def jungle():
 def hexday():
     section = 'Hex Status'
     temperature = roll2d6()
-    weather = weathertype()
+    weather = check_weather_change()
     terrain = terraintype()
     encounter = encounterdie()
     return render_template('generic.html', title=section, status=temperature, weather=weather, terrain=terrain, encounter=encounter)
@@ -123,3 +124,12 @@ def check_treasure():
     output4 = "foo"
     output5 = "bar"
     return render_template('generic5.html', title=section, section=section, item1=gem_ornamental, item2=gem_semiprecious, item3=gem_fancy, item4=output4, item5=output5)
+
+@app.route('/healing')
+def check_healing():
+    section = "Healing"
+    moss_potion = check_moss()
+    moss_poultice = check_moss_poultice()
+    apoth_potion = check_apoth()
+    apoth_poultice = check_apoth_poultice()
+    return render_template('generic5.html', title=section, section=section, item1=moss_potion, item2=moss_poultice, item3=apoth_potion, item4=apoth_poultice, item5="")

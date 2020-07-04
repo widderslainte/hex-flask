@@ -32,4 +32,7 @@ def check_wander_activity():
     array_wander_activity = [ "0", "Lost", "Resting/wounded", "Exploring", "Hunting", "Eating", "Sleeping", "Fleeing", "8...", "9...", "10..." ]
     return 'Wandering Monster Activity: ' + array_wander_activity[roll1d10()]
 
-# The encounter area should have something interesting about it. Visually memorable. Something that presents threat, opportunity, beauty, or revulsion. A threat is pretty obvious: a dragon slumbering on the other side of a rope-bridged chasm, visible by the embers of his breath, a gauntlet of facing statues holding stone halberds aloft, etc. 
+# The encounter area should have something interesting about it. 
+# Visually memorable. Something that presents threat, opportunity, beauty, or revulsion. 
+# A threat is pretty obvious: a dragon slumbering on the other side of a rope-bridged chasm, 
+# visible by the embers of his breath, a gauntlet of facing statues holding stone halberds aloft, etc. 

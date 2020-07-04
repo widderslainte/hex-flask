@@ -6,6 +6,12 @@ def standard_roll():
     total = dice1 + dice2
     return total
 
+def roll2d6():
+    dice1 = random.randint(1,6)
+    dice2 = random.randint(1,6)
+    total = dice1 + dice2
+    return total
+
 def roll1d8():
     dice1 = random.randint(1,8)
     return dice1
@@ -24,4 +30,8 @@ def roll1d20():
 
 def roll1d100():
     dice1 = random.randint(1,100)
+    return dice1
+
+def rolltbd(dsides):
+    dice1 = random.randint(1,dsides)
     return dice1
