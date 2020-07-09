@@ -1,20 +1,21 @@
 import random
+from dice import *
 
-def roll2d6():
-    dice1 = random.randint(1,6)
-    dice2 = random.randint(1,6)
-    total = dice1 + dice2
-    return total
+# def roll2d6():
+#     dice1 = random.randint(1,6)
+#     dice2 = random.randint(1,6)
+#     total = dice1 + dice2
+#     return total
 
-def roll1d8():
-    dice1 = random.randint(1,8)
-    total = dice1
-    return total
+# def roll1d8():
+#     dice1 = random.randint(1,8)
+#     total = dice1
+#     return total
 
-def roll1d10():
-    dice1 = random.randint(1,10)
-    total = dice1
-    return total
+# def roll1d10():
+#     dice1 = random.randint(1,10)
+#     total = dice1
+#     return total
 
 # Determine temperature
 def check_temperature():
@@ -60,7 +61,7 @@ def check_weather():
     else:
         return 'Weather:  Remains the same, (roll was: ' + str(rolls) + ')'
 
-def weathertype():
+def check_weather_change():
     rolls = roll2d6()
     if rolls < 7:
         return 'The weather gets worse, roll was: ' + str(rolls)
@@ -72,6 +73,7 @@ def weathertype():
 # # Determine local terrain
 # def check_local_terrain():
 #     rolls = roll2d6()
+
 # # Determine sounds
 # def check_sounds():
 #     rolls = roll2d6()

@@ -1,10 +1,10 @@
 import random
 
-def roll2d6():
-    dice1 = random.randint(1,6)
-    dice2 = random.randint(1,6)
-    total = dice1 + dice2
-    return total
+# def roll2d6():
+#     dice1 = random.randint(1,6)
+#     dice2 = random.randint(1,6)
+#     total = dice1 + dice2
+#     return total
 
 # Cover
 def check_cover():
