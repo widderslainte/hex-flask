@@ -2,18 +2,24 @@ import random
 from dice import *
 
 
-moss_potion_avail = "50"
+moss_potion_avail = "25"
 moss_potion_amount = 3
 moss_potion_cost = "500sp"
-moss_poultice_avail = "50"
-moss_poultice_amount = 3
-moss_poultice_cost = "250sp"
-apothecary_potion_avail = "50"
+moss_poultice_avail = "75"
+moss_poultice_amount = 6
+moss_poultice_cost = "100sp"
+apothecary_potion_avail = "35"
 apothecary_potion_amount = 3
-apothecary_potion_cost = "400sp"
+apothecary_potion_cost = "500sp"
 apothecary_poultice_avail = "50"
-apothecary_poultice_amount = 3
-apothecary_poultice_cost = "250sp"
+apothecary_poultice_amount = 4
+apothecary_poultice_cost = "100sp"
+trader_potion_avail = "25"
+trader_potion_amount = 6
+trader_potion_cost = "750sp"
+trader_poultice_avail = "50"
+trader_poultice_amount = 6
+trader_poultice_cost = "250sp"
 
 def check_moss():
     if roll1d100() < int(moss_potion_avail):
@@ -44,7 +50,7 @@ def check_apoth_poultice():
     return 'Tuloi Apothecary has: ' + num_poultices + ' healing poultices at ' + apothecary_poultice_cost
 
 
-print(check_moss())
-print(check_moss_poultice())
-print(check_apoth())
-print(check_apoth_poultice())
+# print(check_moss())
+# print(check_moss_poultice())
+# print(check_apoth())
+# print(check_apoth_poultice())

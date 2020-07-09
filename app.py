@@ -8,18 +8,13 @@ from factions import *
 from monsters_jungle import *
 from treasure import *
 from healing import *
+from dice import *
 
 app = Flask(__name__)
 source = '/app.py'
 
 # Load the configuration from the instance folder
 # app.config.from_pyfile('config.py')
-
-def roll2d6():
-    dice1 = random.randint(1,6)
-    dice2 = random.randint(1,6)
-    total = dice1 + dice2
-    return total
 
 def terraintype():
     rolls = roll2d6()
@@ -45,6 +40,11 @@ def hello_world():
 def sample_2d6():
     sample = roll2d6()
     return 'Sample roll was: ' + str(sample)
+
+@app.route('/reaction')
+def reaction():
+    outcome = check_reaction()
+    return outcome
 
 @app.route('/jungle/')
 def jungle():
