@@ -20,7 +20,12 @@ ObstructionJungle = ["Crater", "Chasm", "Cliff", "Ravine", "Swamp", "Vegetation"
 ConstructionType = ["1 Monolith", "2 Barrow", "3 Pyramid", "4 Tower", "5 Spire", "6 Building", "7 Heap", "8 Signpost", "9 Isolated Farm", "10 Ruins"]
 
 # Passage d6
-PassageType = ["1 Track", "2 Path", "3 Trail", "4 Dirt Road", "5 Gravel Road", "6 Paved Road"]
+PassageType = ["", "1 Track", "2 Path", "3 Trail", "4 Dirt Road", "5 Gravel Road", "6 Stone Road"]
+
+def check_passage_type ():
+    passage = PassageType[roll1d6()]
+    return passage
+
 
 # Obstruction Table
 # | d6 | Clear      | Woods      | Desert | (d4) Swamp | (d3) Mountain Road |
@@ -35,4 +40,8 @@ PassageType = ["1 Track", "2 Path", "3 Trail", "4 Dirt Road", "5 Gravel Road", "
 # 1: Indicates that a bridge is out for the listed feature. If in a swamp, any of these results indicate the road is flooded. In the desert, streams and ravines are treated as dry ravines.
 # 2: Blocked by fallen tree in clear, woods, and swamp; blocked by rockslide in mountain; or road hidden by sand in desert.
 
-print(ObstacleType[roll1d10()])
+def check_obstacle_type ():
+    output = foo
+
+# primary_type = (ObstacleType[roll1d10()])
+print(check_passage_type())

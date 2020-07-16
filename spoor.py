@@ -25,3 +25,7 @@ spoor_list = [
     "Picked Fruit/Berries, Remnants of Gathering",
     "Glint of Metal in the Sun",
 ]
+
+def check_spoor():
+    spoor = spoor_list[roll1d20()]
+    return "Spoor: " + spoor

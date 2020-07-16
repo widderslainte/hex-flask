@@ -48,9 +48,3 @@ def check_apoth_poultice():
     else:
         num_poultices = str(0)
     return 'Tuloi Apothecary has: ' + num_poultices + ' healing poultices at ' + apothecary_poultice_cost
-
-
-# print(check_moss())
-# print(check_moss_poultice())
-# print(check_apoth())
-# print(check_apoth_poultice())
