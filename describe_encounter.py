@@ -1,4 +1,5 @@
 import random
+from dice import *
 
 # def roll2d6():
 #     dice1 = random.randint(1,6)
@@ -79,7 +80,7 @@ def check_reaction():
     elif 3 <= rolls <= 5:
         return 'Reaction:    Hostile - Possible Attack, (roll was: ' + str(rolls) + ')'
     elif 9 <= rolls <= 11:
-        return 'Reaction:    No Attack - Leaves, (roll was: ' + str(rolls) + ')'
+        return 'Reaction:    No Attack - Leaves or Considers Offers, (roll was: ' + str(rolls) + ')'
     else:
         return 'Reaction:    Uncertain or Confused, (roll was: ' + str(rolls) + ')'
 

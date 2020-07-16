@@ -8,6 +8,9 @@ from factions import *
 from monsters_jungle import *
 from treasure import *
 from healing import *
+from camp import *
+from spoor import *
+from dice import *
 
 app = Flask(__name__)
 source = '/app.py'
@@ -15,27 +18,28 @@ source = '/app.py'
 # Load the configuration from the instance folder
 # app.config.from_pyfile('config.py')
 
-def roll2d6():
-    dice1 = random.randint(1,6)
-    dice2 = random.randint(1,6)
-    total = dice1 + dice2
-    return total
-
 def terraintype():
     rolls = roll2d6()
-    if rolls < 7:
-        return 'The terrain is jungle, roll was: ' + str(rolls)
+    if rolls < 4:
+        return 'The terrain is low lying (roll was: ' + str(rolls) + ')'
+    elif 4 <= rolls <= 7:
+        return 'The terrain is just more jungle, roll was: ' + str(rolls)
+    elif rolls > 10:
+        return 'The terrain is hilly or raised, roll was: ' + str(rolls)
     else:
         return 'The terrain is horrible jungle, roll was: ' + str(rolls)
 
 def encounterdie():
     die = random.randint(1,6)
     if die == 1:
-        return 'Wandering monster attacks!'
+        return '1: Wandering monster attacks!'
     elif die == 2:
-        return 'Encounter a hazard.'
+        return '2: Encounter a hazard.'
+    elif die == 6:
+        return '6: The day passes uneventfully'
     else:
-        return 'The day passes uneventfully.'
+        spoor = check_spoor()
+        return spoor
 
 @app.route('/')
 def hello_world():
@@ -45,6 +49,11 @@ def hello_world():
 def sample_2d6():
     sample = roll2d6()
     return 'Sample roll was: ' + str(sample)
+
+@app.route('/reaction')
+def reaction():
+    outcome = check_reaction()
+    return outcome
 
 @app.route('/jungle/')
 def jungle():
@@ -72,7 +81,7 @@ def encounter_generation():
 
 @app.route('/environment/')
 def enviroment_generation():
-    section = 'Environment Generation'
+    section = 'Environment Generation: New Day:'
     temp = check_temperature()
     weather = check_weather()
     odors = check_odors()
@@ -133,3 +142,13 @@ def check_healing():
     apoth_potion = check_apoth()
     apoth_poultice = check_apoth_poultice()
     return render_template('generic5.html', title=section, section=section, item1=moss_potion, item2=moss_poultice, item3=apoth_potion, item4=apoth_poultice, item5="")
+
+@app.route('/camp')
+def check_camp_features():
+    output = check_camp()
+    return output
+
+@app.route('/encounter-roll')
+def check_encounter_roll():
+    output = check_unexplored()
+    return output

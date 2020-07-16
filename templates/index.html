@@ -1,42 +1,44 @@
 <html>
    <body>
  <div class="container" style="width: max-content;">
-   <h1 style="text-align: center;">  {{ message }} <hr> </h1>
+
  <figure style="float:left;"
-     <a title="Roller"></a>
+     <a title="Dungeon Science"></a>
  </figure>
  <div class="container" style="float:right">
-  <h4>Generators</h4>
-   <p><a href="/hex">Daily Hex Check</a>: What does the hex look like today?</p>
+  <h3 style="text-align: center;">  {{ message }}</h3>
+  <p><h4>Generators</h4>
+    <li><a href="/environment">New Day: </a>Current Conditions</li>
+    <li><a href="/hex">Enter New Hex</a>: What is this hex like?</li>
     <li>Weather Change</li>
     <li>Moving-Explored</li>
     <li>Moving-Unexplored	</li>
     <li>Resting-Explored</li>
     <li>Searching-Full Day</li>
-   <p><a href="/check">Daily Encounter Check</a></p>
-   <p><a href="/environment">Generate Current Conditions (Environment)</a></p>
+    <li><a href="/camp">Camp Features</a></li>
+  </p>
    <p><b>Encounters</b></p>
+   <li><a href="/check">Daily Encounter Check</a></li>
    <li><a href="/encounter">Generate Scene Layout</a></li>
    <li><a href="/monster">Generate Random Monster</a></li>
    <li><a href="/factions">Faction Connection</a></li>
+   <li><a href="/reaction">Reaction Roll</a></li>
    <p><b>Treasures and Goods</b>
      <li><a href="/treasure">Treasure - I need a gem</a></li>
      <li><a href="/healing">Healing Resources</a></li>
    </p>
    <h4>Static References</h4>
      <li><a href="https://docs.google.com/document/d/1Nw8Jv0HHSwr5UUihKt9xqhRamYOKMpAJHZ3EpCDwpZo/edit#" target="_blank">Uod Treasure</a></li>
-     <li><a href="http://www.random-generator.com/index.php?title=Campsite" target="_blank">Abulufia - Campsite</a>a</li>
-     <li><a href="http://www.random-generator.com/index.php?title=Treasure" target="_blank">Abulufia - Treasure</a>>a</li>
+     <li><a href="http://www.random-generator.com/index.php?title=Campsite" target="_blank">Abulufia - Campsite</a></li>
+     <li><a href="http://www.random-generator.com/index.php?title=Treasure" target="_blank">Abulufia - Treasure</a></li>
      <li><a href="https://widderslainte.github.io/uod/" target="_blank">Uod Wiki</a></li>
      <li><a href="https://widderslainte.github.io/guisarmes/" target="_blank">Guisarmes Wiki</a></li>
      <li><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Main_Page" target="_blank">OSE Wiki</a></li>
      <li><a href="/jungle">Are you in the jungle?</a></li>
    </p>
-
-   <!-- <p><a href='/spencer'>Click if you are Spencer</a> -->
+   <p><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6_vcrD1bBI4KqS8GSW2BLu5hR-yVCi_ipgvbCWZEnCRigWw/viewform?embedded=true" width="640" height="678" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></p>
    <hr> 
    <p>Source: {{ source }}</p>
- 
  </div>
  </div>
 </body>
