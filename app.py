@@ -152,3 +152,13 @@ def check_camp_features():
 def check_encounter_roll():
     output = check_unexplored()
     return output
+
+@app.route('/hazard')
+def check_hazard():
+    output = check_unexplored()
+    return output
+
+@app.route('/spoor')
+def route_spoor():
+    output = check_spoor()
+    return output
