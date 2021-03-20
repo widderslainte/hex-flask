@@ -36,3 +36,4 @@ def check_wander_activity():
 # Visually memorable. Something that presents threat, opportunity, beauty, or revulsion. 
 # A threat is pretty obvious: a dragon slumbering on the other side of a rope-bridged chasm, 
 # visible by the embers of his breath, a gauntlet of facing statues holding stone halberds aloft, etc. 
+

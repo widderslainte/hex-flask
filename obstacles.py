@@ -27,6 +27,26 @@ def check_passage_type ():
     return passage
 
 
+JungleHazard = [
+    "",
+    "1 Ambush by an Encounter in the trees ",
+    "2 Dangerous beast; Encounter if you move",
+    "3 Deadfall falls for Td6 damage to you", 
+    "4 Feverish; can't move for 1d4 days", 
+    "5 Got lost; next move is random", 
+    "6 Mount / pack beast eats toxic root, dies",
+    "7 Non-magic gear item breaks or rots away", 
+    "8 Poisonous vermin bite; Td4 damage", 
+    "9 Thick foliage; can't move today", 
+    "10 Toxic pollen; can't move for 1d4 days", 
+    "11 Vermin eat 1d4 days of food",
+    "12 Trackless waste; next 1d4 moves random",
+]    
+
+def check_jungle_hazard ():
+    junglehazard = JungleHazard[roll1d12()]
+    return junglehazard
+
 # Obstruction Table
 # | d6 | Clear      | Woods      | Desert | (d4) Swamp | (d3) Mountain Road |
 # |----|------------|------------|--------|------------|--------------------|
