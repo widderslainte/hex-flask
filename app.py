@@ -10,6 +10,7 @@ from treasure import *
 from healing import *
 from camp import *
 from spoor import *
+from hirelings import *
 from dice import *
 
 app = Flask(__name__)
@@ -162,3 +163,8 @@ def check_hazard():
 def route_spoor():
     output = check_spoor()
     return output
+
+# @app.route('/hirelings')
+# def route_spoor():
+#     output = check_character_class()
+#     return output
