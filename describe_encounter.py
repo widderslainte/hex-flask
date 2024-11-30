@@ -1,12 +1,6 @@
 import random
 from dice import *
 
-# def roll2d6():
-#     dice1 = random.randint(1,6)
-#     dice2 = random.randint(1,6)
-#     total = dice1 + dice2
-#     return total
-
 # Cover
 def check_cover():
     rolls = roll2d6()
@@ -56,19 +50,19 @@ def check_elevation():
 def check_motivation():
     rolls = roll2d6()
     if rolls == 2:
-        return 'Motivation:  Lost or escpaing, (roll was: ' + str(rolls) + ')'
+        return 'Motivation:  Lost or escaping, (roll was: ' + str(rolls) + ')'
     elif 3 <= rolls <= 4:
-        return 'Motivation:  Overcombing obstacle, (roll was: ' + str(rolls) + ')'
+        return 'Motivation:  Overcoming obstacle, (roll was: ' + str(rolls) + ')'
     elif 5 <= rolls <= 6:
         return 'Motivation:  Resting, (roll was: ' + str(rolls) + ')'
     elif 9 <= rolls <= 10:
-        return 'Motivation:  Seaching for lost person or item, (roll was: ' + str(rolls) + ')'
+        return 'Motivation:  Searching for lost person or item, (roll was: ' + str(rolls) + ')'
     elif rolls == 11:
         return 'Motivation:  Guarding or near lair, (roll was: ' + str(rolls) + ')'
     elif rolls == 12:
         return 'Motivation:  Fleeing encounter, (roll was: ' + str(rolls) + ')'
     else:
-        return 'Motivation:  Seek food/shelter, (roll was: ' + str(rolls) + ')'
+        return 'Motivation:  Seeking food/shelter, (roll was: ' + str(rolls) + ')'
 
 # Reaction
 def check_reaction():
@@ -88,7 +82,7 @@ def check_reaction():
 def check_visibility():
     rolls = roll2d6()
     if rolls < 4:
-        return 'Visibility:  Misty  (roll was: ' + str(rolls) + ')'
+        return 'Visibility:  Misty/Smoke/Foliage  (roll was: ' + str(rolls) + ')'
     else:
         return 'Visibility:  Clear  (roll was: ' + str(rolls) + ')'
 

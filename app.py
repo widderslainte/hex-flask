@@ -168,7 +168,8 @@ def route_spoor():
 def route_hirelings():
     # output = check_character_class()
     # return output
-    section = "Hireling"
+    title = "Hirelings"
+    section = "Available Hirelings"
     # item1 = check_character_class()
     item1 = check_hireling_type()
     item2 = check_common_ancestry()
@@ -176,4 +177,4 @@ def route_hirelings():
     item4 = check_alignment()
     # item5 = check_hp()
     item5 = ""
-    return render_template('generic5.html', title=section, section=section, item1=item1, item2=item2, item3=item3, item4=item4, item5=item5)
+    return render_template('hirelings.html', title=title, section=section, item1=item1, item2=item2, item3=item3, item4=item4, item5=item5)

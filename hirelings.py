@@ -67,6 +67,8 @@ def check_common_ancestry():
         ancestry="Ancestry: Eskla"
     else:
         ancestry="Ancestry: Dominant for Region"
+    # if hireling_type == 'War dog':
+    #     ancestry="dog"
     return ancestry   
 
 # HP
